@@ -131,12 +131,10 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Configure MongoDB using mongoengine
-from mongoengine import connect
-
-# Connect to the MongoDB database
-connect(
-    db="octofit_db",
-    host="localhost",
-    port=27017
-)
+# Configure the database to use Djongo
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'octofit_db',
+    }
+}
