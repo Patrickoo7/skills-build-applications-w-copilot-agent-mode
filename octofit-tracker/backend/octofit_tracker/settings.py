@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-(96n13l^h4=tjd+qnf^u0^0d5d*+!7tyv7xyqb=%jyp!hsb7#1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Update allowed hosts
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -42,6 +43,12 @@ INSTALLED_APPS = [
 # Add the octofit_app to the installed apps
 INSTALLED_APPS += ['octofit_app']
 
+# Add rest_framework to installed apps
+INSTALLED_APPS += ['rest_framework']
+
+# Enable CORS
+INSTALLED_APPS += ['corsheaders']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +58,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Enable CORS middleware
+MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+CORS_ALLOW_HEADERS = ['*']
+
 
 ROOT_URLCONF = 'octofit_tracker.urls'
 
