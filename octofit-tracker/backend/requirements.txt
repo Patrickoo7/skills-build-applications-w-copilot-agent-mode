@@ -1,0 +1,4 @@
+# Replace djongo with mongoengine for MongoDB integration
+Django==4.1
+mongoengine==0.27.0
+pymongo==3.11.4

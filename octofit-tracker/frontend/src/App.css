@@ -1,0 +1,63 @@
+/* Add background color */
+body {
+  background-color: #f0f8ff; /* Light blue */
+  color: #333333; /* Dark text */
+}
+
+/* Style headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #007bff; /* Bootstrap primary color */
+}
+
+/* Style tables */
+.table {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  color: #333333;
+}
+
+/* Style buttons */
+.btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style links */
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #003f7f;
+  text-decoration: underline;
+}
+
+/* Style navigation menu */
+.navbar {
+  background-color: #343a40; /* Dark background */
+}
+
+.navbar-brand {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #dcdcdc;
+}
