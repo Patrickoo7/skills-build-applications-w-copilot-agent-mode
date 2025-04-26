@@ -4,7 +4,7 @@ const Activities = () => {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://skills-build-applications-w-copilot-agent-mode-8000.app.github.dev/api/activity/')
+    fetch('https://skills-build-applications-w-copilot-agent-mode-8000.app.github.dev/api/activities/')
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);
