@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 ]
 
 # Add the octofit_app to the installed apps
-INSTALLED_APPS += ['octofit_app']
+INSTALLED_APPS += ['octofit_tracker.octofit_app']
 
 # Add rest_framework to installed apps
 INSTALLED_APPS += ['rest_framework']
