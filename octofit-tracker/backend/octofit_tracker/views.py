@@ -70,12 +70,13 @@ class WorkoutListCreateView(APIView):
             return Response(serializer.data, status=201)
         return Response(serializer.errors, status=400)
 
+# Update the api_root to use the codespace URL
 class api_root(APIView):
     def get(self, request):
         return Response({
-            'users': reverse('user-list-create', request=request),
-            'teams': reverse('team-list-create', request=request),
-            'activity': reverse('activity-list-create', request=request),
-            'leaderboard': reverse('leaderboard-list-create', request=request),
-            'workouts': reverse('workout-list-create', request=request),
+            'users': reverse('user-list-create', request=request, format=None).replace('http://', 'https://skills-build-applications-w-copilot-agent-mode-8000.app.github.dev/'),
+            'teams': reverse('team-list-create', request=request, format=None).replace('http://', 'https://skills-build-applications-w-copilot-agent-mode-8000.app.github.dev/'),
+            'activity': reverse('activity-list-create', request=request, format=None).replace('http://', 'https://skills-build-applications-w-copilot-agent-mode-8000.app.github.dev/'),
+            'leaderboard': reverse('leaderboard-list-create', request=request, format=None).replace('http://', 'https://skills-build-applications-w-copilot-agent-mode-8000.app.github.dev/'),
+            'workouts': reverse('workout-list-create', request=request, format=None).replace('http://', 'https://skills-build-applications-w-copilot-agent-mode-8000.app.github.dev/'),
         })
