@@ -20,14 +20,15 @@ const Users = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map(user => (
-            <tr key={user.id}>
+          {users.map((user, index) => (
+            <tr key={index}>
               <td>{user.name}</td>
               <td>{user.email}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      <button className="btn btn-primary">Add User</button>
     </div>
   );
 };

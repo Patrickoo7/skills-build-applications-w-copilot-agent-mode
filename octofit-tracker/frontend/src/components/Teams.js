@@ -20,14 +20,15 @@ const Teams = () => {
           </tr>
         </thead>
         <tbody>
-          {teams.map(team => (
-            <tr key={team.id}>
+          {teams.map((team, index) => (
+            <tr key={index}>
               <td>{team.name}</td>
               <td>{team.members.join(', ')}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      <button className="btn btn-primary">Add Team</button>
     </div>
   );
 };

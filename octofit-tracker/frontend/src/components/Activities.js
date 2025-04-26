@@ -20,14 +20,15 @@ const Activities = () => {
           </tr>
         </thead>
         <tbody>
-          {activities.map(activity => (
-            <tr key={activity.id}>
-              <td>{activity.activity_type}</td>
+          {activities.map((activity, index) => (
+            <tr key={index}>
+              <td>{activity.type}</td>
               <td>{activity.duration}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      <button className="btn btn-primary">Add Activity</button>
     </div>
   );
 };

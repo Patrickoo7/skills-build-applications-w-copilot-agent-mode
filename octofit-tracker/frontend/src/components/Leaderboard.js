@@ -20,14 +20,15 @@ const Leaderboard = () => {
           </tr>
         </thead>
         <tbody>
-          {leaderboard.map(entry => (
-            <tr key={entry.id}>
-              <td>{entry.user_id}</td>
+          {leaderboard.map((entry, index) => (
+            <tr key={index}>
+              <td>{entry.userId}</td>
               <td>{entry.score}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      <button className="btn btn-primary">View Leaderboard</button>
     </div>
   );
 };

@@ -10,6 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* Navigation and Routes */}
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
@@ -40,15 +41,6 @@ function App() {
             </div>
           </div>
         </nav>
-        <div className="container mt-4">
-          <Routes>
-            <Route path="/activities" element={<Activities />} />
-            <Route path="/leaderboard" element={<Leaderboard />} />
-            <Route path="/teams" element={<Teams />} />
-            <Route path="/users" element={<Users />} />
-            <Route path="/workouts" element={<Workouts />} />
-          </Routes>
-        </div>
       </div>
     </Router>
   );

@@ -20,14 +20,15 @@ const Workouts = () => {
           </tr>
         </thead>
         <tbody>
-          {workouts.map(workout => (
-            <tr key={workout.id}>
+          {workouts.map((workout, index) => (
+            <tr key={index}>
               <td>{workout.name}</td>
               <td>{workout.description}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      <button className="btn btn-primary">Add Workout</button>
     </div>
   );
 };
